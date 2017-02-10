@@ -5,6 +5,8 @@ class Contact
     private $phoneNumber;
     private $address;
 
+
+
     function __construct($personName, $phoneNumber, $address)
     {
         $this->personName = $personName;
@@ -42,6 +44,17 @@ class Contact
     function setAddress($new_address)
     {
         $this->address = (string) $new_address;
+    }
+
+
+    function save()
+    {
+        array_push($_SESSION['list_of_contacts'], $this);
+    }
+
+    static function getAll()
+    {
+        return $_SESSION['list_of_contacts'];
     }
 
 
