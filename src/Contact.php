@@ -14,6 +14,7 @@ class Contact
         $this->address = $address;
     }
 
+    // personName Getter and Setter
     function getPersonName()
     {
         return $this->personName;
@@ -24,7 +25,7 @@ class Contact
         $this->personName = (string) $new_personName;
     }
 
-
+    // phoneNumber Getter and Setter
     function getPhoneNumber()
     {
         return $this->phoneNumber;
@@ -35,7 +36,7 @@ class Contact
         $this->phoneNumber = (string) $new_phoneNumber;
     }
 
-
+    // address Getter and Setter
     function getAddress()
     {
         return $this->address;
@@ -47,6 +48,7 @@ class Contact
     }
 
 
+    // METHODS
     function save()
     {
         array_push($_SESSION['list_of_contacts'], $this);
@@ -57,6 +59,10 @@ class Contact
         return $_SESSION['list_of_contacts'];
     }
 
+    static function deleteAll()
+    {
+        $_SESSION['list_of_tasks'] = array();
+    }
 
 }
  ?>
