@@ -3,13 +3,41 @@
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
-
     <title>Address Book</title>
 </head>
 <body>
     <div class="container">
         <h1>Address Book</h1>
+        {% if contacts is not empty %}
+            <p>Here are all your contacts:</p>
+            <ul>
+                {% for contact in contacts %}
+                    <li>{{ contact.getPersonName }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 
+        <form action='/contacts' method='post'>
+            <label for='personName'>Name: </label>
+            <input id='personName' name='personName' type='text'>
+            <br>
+
+            <label for='phoneNumber'>Phone Number: </label>
+            <input id='phoneNumber' name='phoneNumber' type='text'>
+            <br>
+
+            <label for='address'>Address: </label>
+            <input id='address' name='address' type='text'>
+            <br>
+
+            <button class="btn btn-success" type='submit'>Add contact</button>
+        </form>
+        <form action='/delete_contacts' method='post'>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-danger" type='submit'>Delete Contacts</button>
+        </form>
     </div>
 </body>
 </html>
