@@ -5,10 +5,13 @@
     <title>Address Book</title>
 </head>
 <body>
-    <h1>You created a contact!</h1>
-    <p>{{ newcontact.getPersonName }}</p>
-    <p>{{ newcontact.getPhoneNumber }}</p>
-    <p>{{ newcontact.getAddress }}</p>
-    <p><a href='/'>View your list of contacts.</a></p>
+    <div class="container">
+        <h1>You created a contact!</h1>
+        <p  class="text-info">{{ newcontact.getPersonName }}</p>
+        <p>{{ newcontact.getPhoneNumber }}</p>
+        <p>{{ newcontact.getAddress }}</p>
+
+        <p><a href='/'>View your list of contacts.</a></p>
+    </div>
 </body>
 </html>
