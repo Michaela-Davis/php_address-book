@@ -5,8 +5,7 @@ class Contact
     private $phoneNumber;
     private $address;
 
-
-
+    // Contact constructor
     function __construct($personName, $phoneNumber, $address)
     {
         $this->personName = $personName;
@@ -61,7 +60,7 @@ class Contact
 
     static function deleteAll()
     {
-        $_SESSION['list_of_tasks'] = array();
+        $_SESSION['list_of_contacts'] = array();
     }
 
 }
