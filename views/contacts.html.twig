@@ -12,7 +12,8 @@
             <p>Here are all your contacts:</p>
             <ul>
                 {% for contact in contacts %}
-                    <li>{{ contact.getPersonName }}</li>
+                    <li class="text-info">{{ contact.getPersonName }}</li>
+                        {{ contact.getPhoneNumber }}    {{ contact.getAddress }}
                 {% endfor %}
             </ul>
         {% endif %}
@@ -32,6 +33,7 @@
 
             <button class="btn btn-success" type='submit'>Add contact</button>
         </form>
+
         <form action='/delete_contacts' method='post'>
             <br>
             <br>
