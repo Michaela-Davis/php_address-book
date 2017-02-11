@@ -1,0 +1,20 @@
+ul {
+    font-family: 'Marck Script', cursive;
+    font-size: 150%;
+}
+
+h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 200%;
+    padding-left: 30px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 242px;
+}
