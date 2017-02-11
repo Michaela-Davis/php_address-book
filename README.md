@@ -4,6 +4,9 @@
 
 #### By _**Michaela Davis**_
 
+## To see the site live, click the link below:
+[Live Address Book](https://php-address-book.herokuapp.com/)
+
 ## Description
 
 _A webpage that allows a user to enter a contact including a person's name, phone number and address. It also allows a user to save a contact, view contacts list, and delete the list._
